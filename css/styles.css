@@ -1,0 +1,388 @@
+/*
+
+ID      Classes, atributos e pseudo classes     Elementos e pseudo elementos
+1             0                                          0
+0             1                                          0
+
+
+*/
+
+
+:root{
+    --white-color: #FFFFFF;
+    --gap:3rem;
+    --light-gray:#EEEEEE;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth ;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    
+    
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat',sans-serif;  
+}
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 5rem;
+    
+}
+h4{
+    font-size: 4.5rem;
+    
+}
+h5{
+    font-size: 4rem;
+    
+}
+h6{
+    font-size: 3.5rem;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.main-bg{
+    background-image: url('../img/Confetti-Doodles.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color) ;
+}
+.white-bg{
+  
+    background: var(--white-color) ;
+    color:black ;
+}
+.main-content{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap) ;
+}
+
+.section {
+    min-height: 100vh;
+
+}
+.menu{
+   
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 0.1rem solid  var(--light-gray);
+}
+.menu-content{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu h1{
+    font-size: 2.3rem;
+    color: black;
+
+}
+.menu h1 a{
+    color: inherit;
+
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li a {
+  display: block;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: black;
+
+}
+.menu  ul li a ::after {
+   content: '';
+   position:absolute; 
+   bottom: 1rem;
+   left: 50%;
+    width: 0;
+   height: 0.2rem;
+   background:crimson;
+   transition: all 300ms ease-in-out;
+  
+}
+  
+  
+  .menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+   
+   }
+
+   .menu-spacing{
+       height: 65px;
+   }
+   
+   .intro-content{
+    position: relative;   
+     top: -6.5rem;
+      display: grid;
+       grid-template-columns: 1fr 1.5fr;
+       gap:var(--gap) ;
+       align-items: center;
+       min-height: 100vh;
+   }
+   
+   .intro-text-content, .intro-img {
+       display: flex;
+       flex-flow: column wrap;
+       justify-content: center;
+       
+   }
+ 
+   .intro-img img{
+       max-width: 100%;
+       min-height: auto;
+   }
+
+
+   .iso-content{
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;   
+    min-height: 100vh;
+    text-align: center;
+
+   }
+   
+   p{
+       margin-bottom: 3rem;
+   }
+   .grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;    
+    min-height: 100vh;
+   
+
+
+   }
+   .grid-one-content h2{
+       margin-bottom: 1rem ;
+   }
+
+   
+   .grid-main-heading{
+       margin-bottom: 1rem;
+   }
+
+   .grid-description{
+       padding-bottom: 5rem;
+   }
+   
+   .grid{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: var(--gap);
+     counter-reset: grid-counter;
+   
+    }
+
+   .grid h3{
+       font-size: 3rem;
+       position: relative;
+       padding: 5rem;
+       padding-bottom: 3rem ;
+   }
+
+   .grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: 0rem;
+    left: -2rem;
+    transform: rotate(5deg);
+
+}
+.gallery-img{
+    
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+
+}
+.gallery-img {
+    transition: all 300ms ease-in-out;
+    
+
+}
+.gallery-img:hover  {
+    transform: translate(-3%,3%) scale(1.2) rotate(5deg);
+    
+
+    
+}
+
+body nav ul li:hover{
+    background: rgb(233, 229, 229);
+
+}
+
+.responsive-table{
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+
+table{
+    min-width:360px ;
+    width: 100%;
+    border: collapse;
+}
+
+table caption{
+    font-size: 3rem;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 1rem;
+    
+
+}
+
+
+
+table td, table th {
+    white-space: nowrap;
+    border: 0.1rem solid var(--light-gray);
+    padding: 1rem;
+    text-align: left;
+
+    
+}
+
+tfoot td{
+    background: var(--light-gray);
+
+
+}
+
+.contact-form{
+    grid-column: span 2 ;
+}
+
+.contact-form .form-grid{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:var(--gap);
+
+
+}
+
+.form-group{
+    min-width: 320px;
+
+    flex: 1 1 320px;
+
+}
+.form-group label{
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.form-group input, .form-group textarea{
+    border: none;
+    background: white;
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+
+.full-widht{
+    width: 100%;
+    flex:1 1 100%;
+}
+.form-group button{
+    border: 0.5rem solid white;
+    background: none;
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    transition:all ease-in-out 300ms;
+}
+.form-group button:hover{
+    border: 0.5rem solid black;
+    background: white;
+    color: black
+}
+.form-grid legend{
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+footer{
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-align: center;
+    font-style: italic;
+    
+}
+.footer a {
+    color:green;
+}
+.footer p{
+    margin: 0;
+    padding: 3rem;
+}
+
+@media (max-widht:800px){
+    .intro-content, .grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-img{
+        width: 100%;
+    }
+
+    .grid-one-content{
+        display: block;
+    }
+    .menu {
+        bottom: 0;
+        text-align: center ;
+    }
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+
+
+}
